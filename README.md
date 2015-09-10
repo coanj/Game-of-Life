@@ -10,8 +10,8 @@ automation algorithm. I also did this to explore C++ in a bit more detail and
 gain a better understanding of object oriented programming.
 
 ToDo:
+		Refine game window scale adjustments.
 		Add wrap around to cells when they reach the edge of the window.
-		Clean up UI and instructions.
 
 ![alt text](https://github.com/coanj/Game-of-Life/blob/master/character.ico "Logo Title Text 1")
 
