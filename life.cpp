@@ -28,6 +28,8 @@ using namespace sf;
 /**
  * DEFAULTS
  */
+int fsize = 20;								//  Font size
+int menX = 8, menY = -3;					//	Button Text offset
 int size = 10;								//	default cell size
 int xwin = 640, ywin = 480;					//	default game window size
 int speed = 50000000;						//	default speed of animation
@@ -353,7 +355,7 @@ void Life::scale(){
 
 /***************************************MENU CLASS***************************************/
 
-Menu::Menu() : mWin(VideoMode(500, 400), "LIFE MENU", Style::Close){
+Menu::Menu() : mWin(VideoMode(550, 400), "LIFE MENU", Style::Close){
 	if(!icon.loadFromFile("assets/cdat")){
 		return;
 	}
@@ -372,124 +374,124 @@ Menu::Menu() : mWin(VideoMode(500, 400), "LIFE MENU", Style::Close){
 	mWin.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 	wh.setFont(mFont);
 	wh.setStyle(Text::Bold);
-	wh.setString(("\t -WINDOW-\n  WIDE  |  TALL"));
-	wh.setCharacterSize(16);
+	wh.setString(("\t    -WINDOW-\n WIDE      |      TALL"));
+	wh.setCharacterSize(fsize-2);
 	wh.setColor(Color::Black);
-	wh.setPosition(22,12);
+	wh.setPosition(40,10);
 	x640.setFont(mFont);
 	x640.setStyle(Text::Bold);
 	x640.setString("640");
-	x640.setCharacterSize(16);
+	x640.setCharacterSize(fsize);
 	x640.setColor(Color::Black);
-	x640.setPosition(47,61);
+	x640.setPosition(43+menX,61+menY);
 	x800.setFont(mFont);
 	x800.setStyle(Text::Bold);
 	x800.setString("800");
-	x800.setCharacterSize(16);
+	x800.setCharacterSize(fsize);
 	x800.setColor(Color::Black);
-	x800.setPosition(47,91);
+	x800.setPosition(43+menX,91+menY);
 	x1024.setFont(mFont);
 	x1024.setStyle(Text::Bold);
 	x1024.setString("1024");
-	x1024.setCharacterSize(16);
+	x1024.setCharacterSize(fsize);
 	x1024.setColor(Color::Black);
-	x1024.setPosition(42,121);
+	x1024.setPosition(37+menX,121+menY);
 	y480.setFont(mFont);
 	y480.setStyle(Text::Bold);
 	y480.setString("480");
-	y480.setCharacterSize(16);
+	y480.setCharacterSize(fsize);
 	y480.setColor(Color::Black);
-	y480.setPosition(150,61);
+	y480.setPosition(150+menX,61+menY);
 	y600.setFont(mFont);
 	y600.setStyle(Text::Bold);
 	y600.setString("600");
-	y600.setCharacterSize(16);
+	y600.setCharacterSize(fsize);
 	y600.setColor(Color::Black);
-	y600.setPosition(150,91);
+	y600.setPosition(150+menX,91+menY);
 	y768.setFont(mFont);
 	y768.setStyle(Text::Bold);
 	y768.setString("768");
-	y768.setCharacterSize(16);
+	y768.setCharacterSize(fsize);
 	y768.setColor(Color::Black);
-	y768.setPosition(150,121);
+	y768.setPosition(150+menX,121+menY);
 	sc.setFont(mFont);
 	sc.setStyle(Text::Bold);
-	sc.setString("CELLULAR\n   SCALE");
-	sc.setCharacterSize(15);
+	sc.setString("CELLULAR SCALE");
+	sc.setCharacterSize(fsize+2);
 	sc.setColor(Color::Black);
-	sc.setPosition(63,153);
+	sc.setPosition(36,158);
 	s10.setFont(mFont);
 	s10.setStyle(Text::Bold);
 	s10.setString("10");
-	s10.setCharacterSize(16);
+	s10.setCharacterSize(fsize);
 	s10.setColor(Color::Black);
-	s10.setPosition(55,201);
+	s10.setPosition(50+menX,201+menY);
 	s9.setFont(mFont);
 	s9.setStyle(Text::Bold);
 	s9.setString("9");
-	s9.setCharacterSize(16);
+	s9.setCharacterSize(fsize);
 	s9.setColor(Color::Black);
-	s9.setPosition(60,231);
+	s9.setPosition(55+menX,231+menY);
 	s8.setFont(mFont);
 	s8.setStyle(Text::Bold);
 	s8.setString("8");
-	s8.setCharacterSize(16);
+	s8.setCharacterSize(fsize);
 	s8.setColor(Color::Black);
-	s8.setPosition(60,261);
+	s8.setPosition(55+menX,261+menY);
 	s7.setFont(mFont);
 	s7.setStyle(Text::Bold);
 	s7.setString("7");
-	s7.setCharacterSize(16);
+	s7.setCharacterSize(fsize);
 	s7.setColor(Color::Black);
-	s7.setPosition(60,291);
+	s7.setPosition(55+menX,291+menY);
 	s6.setFont(mFont);
 	s6.setStyle(Text::Bold);
 	s6.setString("6");
-	s6.setCharacterSize(16);
+	s6.setCharacterSize(fsize);
 	s6.setColor(Color::Black);
-	s6.setPosition(60,321);
+	s6.setPosition(55+menX,321+menY);
 	s5.setFont(mFont);
 	s5.setStyle(Text::Bold);
 	s5.setString("5");
-	s5.setCharacterSize(16);
+	s5.setCharacterSize(fsize);
 	s5.setColor(Color::Black);
-	s5.setPosition(165,201);
+	s5.setPosition(162+menX,201+menY);
 	s4.setFont(mFont);
 	s4.setStyle(Text::Bold);
 	s4.setString("4");
-	s4.setCharacterSize(16);
+	s4.setCharacterSize(fsize);
 	s4.setColor(Color::Black);
-	s4.setPosition(165,231);
+	s4.setPosition(161+menX,231+menY);
 	s3.setFont(mFont);
 	s3.setStyle(Text::Bold);
 	s3.setString("3");
-	s3.setCharacterSize(16);
+	s3.setCharacterSize(fsize);
 	s3.setColor(Color::Black);
-	s3.setPosition(165,261);
+	s3.setPosition(162+menX,261+menY);
 	s2.setFont(mFont);
 	s2.setStyle(Text::Bold);
 	s2.setString("2");
-	s2.setCharacterSize(16);
+	s2.setCharacterSize(fsize);
 	s2.setColor(Color::Black);
-	s2.setPosition(165,291);
+	s2.setPosition(162+menX,291+menY);
 	s1.setFont(mFont);
 	s1.setStyle(Text::Bold);
 	s1.setString("1");
-	s1.setCharacterSize(16);
+	s1.setCharacterSize(fsize);
 	s1.setColor(Color::Black);
-	s1.setPosition(168,321);
+	s1.setPosition(162+menX,321+menY);
 	st1.setFont(mFont);
 	st1.setStyle(Text::Bold);
 	st1.setString("START\nBLANK");
-	st1.setCharacterSize(12);
-	st1.setColor(Color::Blue);
-	st1.setPosition(40,357);
+	st1.setCharacterSize(fsize-6);
+	st1.setColor( Color(21, 73, 3, 255) );
+	st1.setPosition(45,356);
 	st2.setFont(mFont);
 	st2.setStyle(Text::Bold);
-	st2.setString(" START\nRANDOM");
-	st2.setCharacterSize(12);
-	st2.setColor(Color::Blue);
-	st2.setPosition(137,357);
+	st2.setString("  START\nRANDOM");
+	st2.setCharacterSize(fsize-6);
+	st2.setColor( Color(21, 73, 3, 255) );
+	st2.setPosition(142,356);
 	sizeImg.setTexture(large);
 	sizeImg.setPosition(10,10);
 	w640.setTexture(small);
@@ -548,36 +550,34 @@ void Menu::run(){
  */
 void Menu::list(){
 	rules.setFont(mFont);
-	rules.setCharacterSize(10);
+	rules.setCharacterSize(fsize-6);
 	rules.setColor(Color::Green);
-	rules.setPosition(260,10);
+	rules.setPosition(245,10);
 	rules.scale(1,.97);
-	std::string ruleText= 	"\t <GAME OF LIFE RULES>\n"
-							"*****************************\n"
-							"1>  Any Cell with fewer than\n"
-							"\ttwo live neighbors, dies\n"
-							"\tdue to underpopulation.\n"
-							"2> Any Cell with two or three\n"
-							"\tneighbors lives on\n"
-							"3> Any cell with more than\n"
-							"\tthree neighbors dies, due\n"
-							"\tto overcrowding.\n"
-							"4> Any dead Cell with exactly\n"
-							"\tthree or six neighbors\n"
-							"\tbecomes living due to\n"
-							"\treproduction.\n"
-							"*****************************\n\n"
-							"\t\t<INSTRUCTIONS>\n"
-							"1>  Pick a width and height\n"
-							"    for the size of the window\n"
-							"2> Choose a Cell size\n"
-							"3> Choose to start with a\n"
-							"    blank screen or randomly\n"
-							"    filled\n\n"
-							"PAUSE   : Mouse right click\n"
-							"BLOB     : Mouse Left click\n"
-							"DELETE : Mouse left click\n"
-							"              on one Cell\n";
+	std::string ruleText= 	"                       <GAME OF LIFE RULES>\n"
+							"************************************************\n"
+							"1-  Any Cell with fewer than two live neighbors,\n"
+							"\t  dies due to underpopulation.\n"
+							"2-  Any Cell with two or three neighbors lives.\n"
+							"3-  Any cell with more than three neighbors\n"
+							"\t  dies, due to overcrowding.\n"
+							"4-  Dead Cells with three or six neighbors\n"
+							"\t  becomes living due to reproduction.\n"
+							"************************************************\n"
+							"                             <INSTRUCTIONS>\n"
+							"************************************************\n"
+							"1-  Pick a width and height for the size of the\n"
+							"\t  window\n"
+							"2-  Choose a Cell size\n"
+							"3-  Choose to start with a blank screen or\n"
+							"\t  randomly filled\n"
+							"************************************************\n"
+							"                                   <CONTROLS>\n"
+							"************************************************\n"
+							"PAUSE  = \tMouse right click\n"
+							"BLOB     = \tMouse Left click\n"
+							"DELETE = \tMouse left click on one Cell\n"
+							"************************************************";
 	
 	rules.setString(ruleText);
 }
