@@ -14,6 +14,8 @@ ToDo:
 		Add wrap around to cells when they reach the edge of the window.
 		Clean up UI and instructions.
 
-![alt text](https://github.com/coanj/Game-of-Life/blob/master/assets/game.jpg "Logo Title Text 1")
+![alt text](https://github.com/coanj/Game-of-Life/blob/master/character.ico "Logo Title Text 1")
 
-![alt text](https://github.com/coanj/Game-of-Life/blob/master/assets/game.jpg "Logo Title Text 2")
+![alt text](https://github.com/coanj/Game-of-Life/blob/master/assets/menu.jpg "Logo Title Text 1")
+
+![alt text](https://github.com/coanj/Game-of-Life/blob/master/assets/game.jpg "Logo Title Text 1")
